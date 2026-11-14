@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>openlegs — 立法雷達 Dashboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang HK", "Microsoft YaHei", sans-serif; background: #0f172a; color: #e2e8f0; padding: 24px; }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  .sub { color: #94a3b8; font-size: 13px; margin-bottom: 20px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-bottom: 24px; }
+  .card { background: #1e293b; border-radius: 10px; padding: 18px; border-left: 4px solid #38bdf8; }
+  .card h2 { font-size: 15px; margin-bottom: 8px; }
+  .card .num { font-size: 30px; font-weight: 700; }
+  .card .meta { color: #94a3b8; font-size: 12px; margin-top: 6px; }
+  .track-ev { border-left-color: #f472b6; }
+  .track-tax { border-left-color: #facc15; }
+  table { width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 10px; overflow: hidden; margin-bottom: 24px; }
+  th, td { padding: 10px 14px; text-align: left; font-size: 13px; border-bottom: 1px solid #334155; }
+  th { background: #334155; color: #cbd5e1; font-weight: 600; white-space: nowrap; }
+  td a { color: #7dd3fc; text-decoration: none; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; }
+  .b-new { background: #164e63; color: #7dd3fc; }
+  .b-watch { background: #422006; color: #fbbf24; }
+  .footer { color: #64748b; font-size: 11px; margin-top: 8px; }
+</style>
+</head>
+<body>
+  <h1>🏛️ openlegs — 立法雷達 Dashboard</h1>
+  <div class="sub">目標：中期選舉後民主黨權力評估 · 三線雷達 · 每晚 20:00 自動更新 · <a href="https://github.com/chuckchanchi-cpu/openlegs" style="color:#7dd3fc">GitHub</a></div>
+
+  <div class="cards">
+    <div class="card">
+      <h2> Chips to China <span class="badge b-new">4 今日</span></h2>
+      <div class="num">5</div>
+      <div class="meta">累積追蹤項目 · 最新報告 2026-11-14</div>
+    </div>
+    <div class="card track-ev">
+      <h2>🚗 EV from China <span class="badge b-new">3 今日</span></h2>
+      <div class="num">5</div>
+      <div class="meta">累積追蹤項目 · 最新報告 2026-11-14</div>
+    </div>
+    <div class="card track-tax">
+      <h2>💰 Tax the Rich <span class="badge b-new">5 今日</span></h2>
+      <div class="num">5</div>
+      <div class="meta">累積追蹤項目 · 最新報告 2026-11-14</div>
+    </div>
+  </div>
+
+  <table>
+    <tr><th>雷達線</th><th>今日新動態</th><th>累積追蹤</th><th>最新報告</th><th>狀態</th><th>聽日追蹤點</th></tr>
+    <tr>
+      <td> Chips to China</td><td>4</td><td>5</td>
+      <td><a href="reports/2026-11-14_晶片_法律工具與失效模式.md">晶片_法律工具與失效模式</a></td>
+      <td><span class="badge b-new">活躍</span></td>
+      <td>BIS 新規 / SME 禁令立法化</td>
+    </tr>
+    <tr>
+      <td>🚗 EV from China</td><td>3</td><td>5</td>
+      <td><a href="reports/2026-11-14_EV_關稅結構與繞道機制.md">EV_關稅結構與繞道機制</a></td>
+      <td><span class="badge b-new">活躍</span></td>
+      <td>產地規則 / BYD 墨西哥進展</td>
+    </tr>
+    <tr>
+      <td>💰 Tax the Rich</td><td>5</td><td>5</td>
+      <td><a href="radar/2026-11-14_TaxTheRich_初輪掃描.md">TaxTheRich_初輪掃描</a></td>
+      <td><span class="badge b-new">活躍</span></td>
+      <td>Ways & Means / Wyden 言論</td>
+    </tr>
+  </table>
+
+  <div class="footer">自動更新：每晚 20:00 HKT · 呈現 lead：fring1118（Claw）· 數據支援：fring1122-agent · 重型研究：ai1 Claude<br>
+  追蹤文件：<a href="docs/timeline.md" style="color:#64748b">timeline</a> · <a href="docs/methodology.md" style="color:#64748b">methodology</a></div>
+</body>
+</html>
