@@ -1,5 +1,6 @@
 # openlegs — 立法雷達（Legislative Radar）
 
+> **Repo**: https://github.com/chuckchanchi-cpu/openlegs（public，main）
 > 2026-11-14 成立。發起人 Chuck，由 OpenClaw 團隊（fring1118 / fring1122-agent）協作。
 > 起因：fring1122-agent 嘅 TAX LEGISLATION WATCH 隨機彈出，Chuck 決定正經做立法研究 —「from the prerequisites stage」。
 
