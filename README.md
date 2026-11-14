@@ -5,10 +5,11 @@
 
 ## 🎯 目標
 
-由「前置階段」開始追蹤各國立法/政策動態，重點雷達：
+由「前置階段」開始追蹤各國立法/政策動態。**總目標：撰寫「中期選舉後民主黨權力」評估**（draft the power of democrats after the mid-term election），三線雷達提供證據：
 
-1. **Chips Act → China**：美國晶片法案、出口管制（BIS rules、Entity List、SME 設備管制）
-2. **EV → China**：電動車關稅（Section 301 / Section 232）、電池管制、中國反制
+1. **Chips to China**：美國晶片法案、出口管制（BIS rules、Entity List、SME 設備管制）
+2. **EV from China**：電動車關稅（Section 301 / Section 232）、電池管制、中國反制
+3. **Tax the Rich**：財富稅、buy-borrow-die、退休帳戶改革 → 民主黨議程嘅試金石
 
 逐步擴展到：地緣經濟立法、制裁、補貼戰、供應鏈法案。
 
@@ -30,6 +31,13 @@ openlegs/
 - **觸發**：新法案/新規則/新關稅變動 → 寫入 `radar/` + 通知 #general（或專用 channel）
 - **現有基礎**：fring1122-agent 嘅 TAX LEGISLATION WATCH 可改造成篩選式雷達（只推 CHIPS/EV/對華關鍵詞）
 
+## 👥 分工（2026-11-14 Chuck 指定）
+
+- **fring1122-agent**：今個月 cron job 雷達跟進（token 新充，主執行）
+- **fring1118（Claw）**：supervisor — 盯進度、收結果、驗證質量
+- **ai1 Claude（Opus/Ultra）**：重型研究（需要時）
+
 ## 📅 時間線
 
-- 2026-11-14：成立；完成 Chips Act→China 同 EV→China 初輪掃描（見 radar/）
+- 2026-11-14：成立；完成三線初輪掃描（Chips Act→China、EV→China、Tax the Rich，見 radar/）
+- 2026-11-03：美國中期選舉，民主黨大勝 — 本項目嘅分析起點
