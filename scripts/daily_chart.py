@@ -17,15 +17,15 @@ plt.rcParams["axes.unicode_minus"] = False
 
 HEADERS = ["雷達線", "今日新動態", "累積追蹤", "最新報告", "聽日追蹤點"]
 ROWS = [
-    ["◆ Chips to China（晶片）", "4", "5",
-     "2026-11-14_晶片_法律工具與失效模式",
-     "BIS 新規 / SME 全面禁令立法化 / H200 政策"],
-    ["◆ EV from China（電動車）", "3", "5",
+    ["◆ Chips to China（晶片）", "2", "5",
+     "2026-11-14_晶片_法律工具與失效模式（11-15 修正）",
+     "BIS 新規 / SME 禁令立法化 / H200 / 待證動態補來源"],
+    ["◆ EV from China（電動車）", "0", "5",
      "2026-11-14_EV_關稅結構與繞道機制",
      "產地規則堵漏 / BYD 墨西哥工廠 / 中方反制"],
-    ["◆ Tax the Rich（富人稅）", "5", "5",
-     "2026-11-14_TaxTheRich_初輪掃描",
-     "Ways & Means 議程 / HR10846 進度 / Wyden 言論"],
+    ["◆ Tax the Rich（富人稅）", "1", "6",
+     "2026-11-14_TaxTheRich_初輪掃描（+加密 watch item）",
+     "Ways & Means / HR10846 / Wyden / BTC 加密政治反應"],
 ]
 COL_WIDTHS = [0.17, 0.10, 0.09, 0.32, 0.32]
 ROW_H = 0.135
