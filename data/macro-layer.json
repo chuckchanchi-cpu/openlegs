@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T03:39:44.565Z",
+  "generatedAt": "2026-11-15T05:06:32.679Z",
   "asOfTradingDate": "2026-11-13",
   "yield10y": {
     "now": 5.1539998054504395,
@@ -67,8 +67,9 @@
       "High-yield credit was essentially flat (-0.38%), so there is no credit stress signal. A borrower struggling to place debt at an acceptable price is a pricing standoff, not default fear.",
       "Long Treasuries moved -3.1% while the 10y yield rose - duration is being repriced.",
       "The 10y yield is up 1.01pp over one year (4.15% to 5.15%), which is the dominant discount-rate story. This dwarfs the 0.2pp move since the election.",
-      "Inside AI, the vertically-integrated names and the datacenter/power complex diverged sharply - that is capital rotation within the theme, not a single AI verdict."
+      "Inside AI, the vertically-integrated names and the datacenter/power complex diverged sharply over five sessions. WHY they diverged is not observable in price data - capital rotation, an NVDA-specific event, or export-control news would all look identical here. Treat rotation as a hypothesis, not a finding."
     ],
-    "implication": "The QTS story is a useful signal about the primary market, but the data does not show a credit event. It shows a discount-rate regime plus rotation inside AI. Any party or policy story must first control for these common factors."
+    "time_scale_warning": "The 1y yield change and the 5-day equity divergence are different horizons. The yield did not move 1pp in five sessions, so the rate story cannot explain a five-day cross-sectional split. Do not let a one-year explanation stand in for a five-day one.",
+    "implication": "The QTS story is a useful signal about primary-market pricing power, but the data does not show a credit event. It shows an elevated discount-rate regime plus a five-day divergence inside AI whose cause is not identifiable from prices alone. Any party or policy story must first control for these common factors."
   }
 }

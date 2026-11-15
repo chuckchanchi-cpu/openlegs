@@ -204,11 +204,13 @@ async function main() {
         ? `The 10y yield is up ${out.yield10y.change1y_pp}pp over one year (${out.yield10y.y1?.toFixed(2)}% to ${out.yield10y.now?.toFixed(2)}%), which is the dominant discount-rate story. This dwarfs the ${out.yield10y.changeSinceElection_pp}pp move since the election.`
         : `The 10y yield has not moved much over one year.`,
       aiDivergence
-        ? 'Inside AI, the vertically-integrated names and the datacenter/power complex diverged sharply - that is capital rotation within the theme, not a single AI verdict.'
+        ? 'Inside AI, the vertically-integrated names and the datacenter/power complex diverged sharply over five sessions. WHY they diverged is not observable in price data - capital rotation, an NVDA-specific event, or export-control news would all look identical here. Treat rotation as a hypothesis, not a finding.'
         : 'AI names moved broadly together.',
     ],
+    time_scale_warning:
+      'The 1y yield change and the 5-day equity divergence are different horizons. The yield did not move 1pp in five sessions, so the rate story cannot explain a five-day cross-sectional split. Do not let a one-year explanation stand in for a five-day one.',
     implication:
-      'The QTS story is a useful signal about the primary market, but the data does not show a credit event. It shows a discount-rate regime plus rotation inside AI. Any party or policy story must first control for these common factors.',
+      'The QTS story is a useful signal about primary-market pricing power, but the data does not show a credit event. It shows an elevated discount-rate regime plus a five-day divergence inside AI whose cause is not identifiable from prices alone. Any party or policy story must first control for these common factors.',
   };
 
   fs.writeFileSync(OUT, JSON.stringify(out, null, 2), 'utf8');
