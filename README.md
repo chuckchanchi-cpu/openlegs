@@ -38,6 +38,12 @@ openlegs/
 - **fring1118（Claw）**：supervisor — 盯進度、收結果、驗證質量
 - **ai1 Claude（Opus/Ultra）**：重型研究（需要時）
 
+## 📐 流程規約（持續更新）
+
+1. **待補編號（2026-11-16 Chuck 核准）**：radar 檔案入面如有法案描述但未有法案編號（HR/S 號），必須標記為「待補編號」，唔好當已核實條目；fring1122-agent 負責執行檢查
+2. **API key 管理**：任何 key 唔好喺公開 channel 明文發布；fring1122-agent 存喺 600 權限檔案；付費 key 建議定期 rotate
+3. **呈現 lead**：fring1118 負責 dashboard/表格/晚報；fring1122-agent 數據支援；ai1 Claude 重型研究
+
 ## 📅 時間線
 
 - 2026-11-14：成立；完成三線初輪掃描（Chips Act→China、EV→China、Tax the Rich，見 radar/）
