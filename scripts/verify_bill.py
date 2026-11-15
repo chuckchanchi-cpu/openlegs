@@ -13,11 +13,21 @@ verified. Verified example (2026-11-15):
   claimed  H.R.1188 = "No American Chips..."  actual Police CAMERA Act of 2025
 The real Chip Security Act is H.R.3447.
 
-Data source (no API key required)
----------------------------------
-govinfo.gov publishes the bill text HTML at a predictable path:
-  https://www.govinfo.gov/content/pkg/BILLS-<congress><type><number><ver>/html/....htm
-The short title appears in the first part of the document.
+Data sources
+------------
+1. Congress.gov API (optional, richer) - key read from
+   ~/.openclaw/secrets/congress-api-key or $CONGRESS_API_KEY.
+   Gives official title, sponsor, status, and the full /titles alias list.
+2. govinfo.gov bill text HTML (no key needed) - predictable path:
+   https://www.govinfo.gov/content/pkg/BILLS-<congress><type><number><ver>/html/....htm
+   Gives the SHORT title the bill calls itself.
+
+Why both: the API `title` field is often a condensed formal title, NOT the
+short title. Verified 2026-11-16 on H.R.10846:
+   API title     = "Pay Your TAB Act of 2026"
+   govinfo short = "Pay Your Taxes Avoided by Borrowing Act"
+Comparing against the API title alone would false-MISMATCH a correct citation.
+So a match against ANY title from ANY source counts.
 
 Usage
 -----
@@ -32,9 +42,11 @@ Exit codes
 import argparse
 import difflib
 import json
+import os
 import re
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 
 # version suffixes worth trying, most common first
@@ -136,6 +148,59 @@ def lookup(congress, btype, number):
     return [], None
 
 
+def api_key():
+    """Congress.gov key from env, else the 600-mode secrets file."""
+    k = os.environ.get("CONGRESS_API_KEY", "").strip()
+    if k:
+        return k
+    path = os.path.expanduser("~/.openclaw/secrets/congress-api-key")
+    try:
+        with open(path) as f:
+            return f.read().strip()
+    except OSError:
+        return ""
+
+
+def api_lookup(congress, btype, number):
+    """Congress.gov API: title + /titles aliases + metadata. None if no key."""
+    key = api_key()
+    if not key:
+        return None
+    base = "https://api.congress.gov/v3/bill/%s/%s/%s" % (congress, btype.lower(), number)
+    q = "?format=json&api_key=" + urllib.parse.quote(key)
+    raw = _get(base + q)
+    if not raw:
+        return None
+    try:
+        b = json.loads(raw).get("bill", {})
+    except Exception:
+        return None
+    titles = []
+    if b.get("title"):
+        titles.append(b["title"])
+    traw = _get(base + "/titles" + q)
+    if traw:
+        try:
+            for t in json.loads(traw).get("titles", []):
+                if t.get("title"):
+                    titles.append(t["title"])
+        except Exception:
+            pass
+    seen, uniq = set(), []
+    for t in titles:
+        k = re.sub(r"\s+", " ", t.lower()).strip()
+        if k not in seen:
+            seen.add(k)
+            uniq.append(re.sub(r"\s+", " ", t).strip())
+    return {
+        "titles": uniq,
+        "introduced": b.get("introducedDate"),
+        "sponsor": (b.get("sponsors") or [{}])[0].get("fullName", ""),
+        "latestAction": (b.get("latestAction") or {}).get("text", ""),
+        "url": base,
+    }
+
+
 def compare(claimed, actual):
     if not actual:
         return "NOT_FOUND", 0.0
@@ -152,34 +217,56 @@ def compare(claimed, actual):
 
 
 def check(congress, btype, number, claimed):
-    titles, url = lookup(congress, btype, number)
-    # accept a match against ANY alternative short title
+    """Verify across BOTH sources; a match against any title from any source wins."""
+    api = api_lookup(congress, btype, number)
+    gv_titles, gv_url = lookup(congress, btype, number)
+
+    all_titles, sources = [], []
+    if api:
+        all_titles.extend(api["titles"])
+        sources.append("congress.gov/api")
+    if gv_titles:
+        all_titles.extend(gv_titles)
+        sources.append("govinfo.gov/text")
+
+    # de-dupe case-insensitively
+    seen, uniq = set(), []
+    for t in all_titles:
+        k = re.sub(r"\s+", " ", t.lower()).strip()
+        if k and k not in seen:
+            seen.add(k)
+            uniq.append(t)
+
     best_verdict, best_score, best_title = "NOT_FOUND", 0.0, None
     rank = {"NOT_FOUND": 0, "MISMATCH": 1, "CLOSE": 2, "EXACT": 3}
-    for t in titles:
+    for t in uniq:
         v, s = compare(claimed or "", t)
         if rank[v] > rank[best_verdict] or (rank[v] == rank[best_verdict] and s > best_score):
             best_verdict, best_score, best_title = v, s, t
-    verdict, score = best_verdict, best_score
+
     out = {
         "congress": congress,
         "type": btype.upper(),
         "number": number,
         "claimed_title": claimed,
-        "actual_title": best_title or (titles[0] if titles else None),
-        "alternatives": titles,
-        "match": verdict,
-        "score": round(score, 3),
-        "source": url,
-        "safe_to_publish": verdict in ("EXACT", "CLOSE"),
+        "actual_title": best_title or (uniq[0] if uniq else None),
+        "alternatives": uniq[:8],
+        "match": best_verdict,
+        "score": round(best_score, 3),
+        "sources_used": sources,
+        "source": gv_url or (api["url"] if api else None),
+        "safe_to_publish": best_verdict in ("EXACT", "CLOSE"),
     }
-    if verdict == "MISMATCH":
+    if api:
+        out["meta"] = {"introduced": api["introduced"], "sponsor": api["sponsor"],
+                       "latestAction": api["latestAction"]}
+
+    if best_verdict == "MISMATCH":
         out["warning"] = ("DANGEROUS: bill number is real but the claimed title is wrong. "
                           "Do not publish this entry.")
-    elif verdict == "NOT_FOUND":
-        out["warning"] = ("No bill text found for any known version suffix. Either the bill "
-                          "does not exist, or it has not been published yet. Treat as "
-                          "UNVERIFIED - do not publish without a second source.")
+    elif best_verdict == "NOT_FOUND":
+        out["warning"] = ("No bill text or API record found. Either the bill does not exist, "
+                          "or it is not published yet. Treat as UNVERIFIED.")
     return out
 
 
