@@ -1,0 +1,74 @@
+{
+  "generatedAt": "2026-11-15T03:39:44.565Z",
+  "asOfTradingDate": "2026-11-13",
+  "yield10y": {
+    "now": 5.1539998054504395,
+    "atElection": 4.952000141143799,
+    "preElection": 4.993000030517578,
+    "m1": 5.0980000495910645,
+    "m3": 4.723999977111816,
+    "y1": 4.1479997634887695,
+    "peak2y": 5.310999870300293,
+    "trough2y": 3.953000068664551,
+    "changeSinceElection_pp": 0.2,
+    "change30d_pp": 0.06,
+    "change1y_pp": 1.01,
+    "note": "yield up = discount rate up = long-duration assets reprice lower"
+  },
+  "returns": {
+    "sinceElection": {
+      "hyg": -0.05,
+      "lqd": -0.88,
+      "tlt": -2.13,
+      "spy": 0,
+      "ibit": -11.6,
+      "smh": -6.13,
+      "vrt": -14.37,
+      "dlr": -0.14,
+      "crwv": -1.14
+    },
+    "last5d": {
+      "hyg": -0.38,
+      "lqd": -1.65,
+      "tlt": -3.1,
+      "spy": 2.59,
+      "ibit": -9.19,
+      "smh": 4.91,
+      "vrt": 10.51,
+      "dlr": 3.32,
+      "crwv": 14.5
+    }
+  },
+  "vol": {
+    "vix": 19.299999237060547,
+    "vixChange5d_pct": -24.73,
+    "move": 98.79000091552734,
+    "moveChange5d_pct": 6.49,
+    "note": "MOVE up = rate vol up = bond market unsettled, distinct from equity fear"
+  },
+  "diagnosis": {
+    "verdict": "MIXED_OR_UNCLEAR",
+    "evidence": {
+      "hyg5d": -0.38,
+      "lqd5d": -1.65,
+      "tlt5d": -3.1,
+      "yield30dChange_pp": 0.06,
+      "yield1yChange_pp": 1.01,
+      "creditStable": true,
+      "ratesMoved": false,
+      "durationHit": true,
+      "aiDivergence": true,
+      "spy5d": 2.59,
+      "ibit5d": -9.19
+    },
+    "explanation": "Signals are mixed; no single-factor explanation holds.",
+    "what_the_data_actually_shows": [
+      "Equities ROSE 2.59% over five sessions while crypto moved -9.19% - this is not a broad risk-off event.",
+      "High-yield credit was essentially flat (-0.38%), so there is no credit stress signal. A borrower struggling to place debt at an acceptable price is a pricing standoff, not default fear.",
+      "Long Treasuries moved -3.1% while the 10y yield rose - duration is being repriced.",
+      "The 10y yield is up 1.01pp over one year (4.15% to 5.15%), which is the dominant discount-rate story. This dwarfs the 0.2pp move since the election.",
+      "Inside AI, the vertically-integrated names and the datacenter/power complex diverged sharply - that is capital rotation within the theme, not a single AI verdict."
+    ],
+    "implication": "The QTS story is a useful signal about the primary market, but the data does not show a credit event. It shows a discount-rate regime plus rotation inside AI. Any party or policy story must first control for these common factors."
+  }
+}

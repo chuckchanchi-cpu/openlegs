@@ -1,0 +1,1050 @@
+{
+  "generatedAt": "2026-11-15T01:07:32.472Z",
+  "asOfTradingDate": "2026-11-13",
+  "windows": {
+    "election": "2026-11-03",
+    "preElection": "2026-10-27",
+    "ytd": "2026-01-01"
+  },
+  "baskets": {
+    "byDonor": {
+      "D": {
+        "since_election": -0.82,
+        "runup_1w": 1.04,
+        "y1": 2.56,
+        "ytd": -2.74,
+        "n": 17
+      },
+      "R": {
+        "since_election": -4.48,
+        "runup_1w": -1.7,
+        "y1": 19.36,
+        "ytd": 13.32,
+        "n": 16
+      }
+    },
+    "byGroup": {
+      "CleanEnergy": {
+        "since_election": -4.58,
+        "runup_1w": 5.04,
+        "y1": -18.74,
+        "ytd": -22.92,
+        "exposure": 9,
+        "n": 6
+      },
+      "BigTech": {
+        "since_election": 4.64,
+        "runup_1w": -3.96,
+        "y1": 12.26,
+        "ytd": 10.49,
+        "exposure": -3,
+        "n": 5
+      },
+      "Healthcare": {
+        "since_election": 3.58,
+        "runup_1w": 0.1,
+        "y1": 31.6,
+        "ytd": 26.79,
+        "exposure": 4,
+        "n": 3
+      },
+      "Cannabis": {
+        "since_election": -17.15,
+        "runup_1w": 11.14,
+        "y1": 15.17,
+        "ytd": -22.34,
+        "exposure": 5,
+        "n": 1
+      },
+      "Rates": {
+        "since_election": -2.13,
+        "runup_1w": -0.64,
+        "y1": -10.9,
+        "ytd": -8.79,
+        "exposure": 3,
+        "n": 1
+      },
+      "Haven": {
+        "since_election": -1.06,
+        "runup_1w": -3.5,
+        "y1": -4.36,
+        "ytd": -10.75,
+        "exposure": 4,
+        "n": 1
+      },
+      "MuskEmpire": {
+        "since_election": -2.08,
+        "runup_1w": -2.2,
+        "y1": -4.57,
+        "ytd": -10.92,
+        "exposure": 3,
+        "n": 1
+      },
+      "Crypto": {
+        "since_election": -13.85,
+        "runup_1w": -5.8,
+        "y1": -39.93,
+        "ytd": -32.86,
+        "exposure": 8,
+        "n": 3
+      },
+      "PrivatePrison": {
+        "since_election": 8.43,
+        "runup_1w": -0.08,
+        "y1": 107.8,
+        "ytd": 84.31,
+        "exposure": 3,
+        "n": 2
+      },
+      "Fossil": {
+        "since_election": -3.22,
+        "runup_1w": -1.8,
+        "y1": 44.39,
+        "ytd": 40.7,
+        "exposure": -3,
+        "n": 2
+      },
+      "Defense": {
+        "since_election": -3.35,
+        "runup_1w": 4.04,
+        "y1": 14.98,
+        "ytd": 7.53,
+        "exposure": 3,
+        "n": 3
+      },
+      "Finance": {
+        "since_election": 1.2,
+        "runup_1w": 1.57,
+        "y1": 17.23,
+        "ytd": 7.73,
+        "exposure": -4,
+        "n": 2
+      },
+      "AI": {
+        "since_election": -10.29,
+        "runup_1w": -6.36,
+        "y1": 16.79,
+        "ytd": 11.54,
+        "exposure": 1,
+        "n": 3
+      },
+      "Benchmark": {
+        "since_election": 0,
+        "runup_1w": -1.99,
+        "y1": 13.32,
+        "ytd": 10.42,
+        "exposure": 0,
+        "n": 1
+      }
+    }
+  },
+  "hypotheses": {
+    "H1": {
+      "metric": "D basket minus R basket, since election",
+      "value": 3.66,
+      "pass": ">= +2.0 pp",
+      "falsify": "< 0.0 pp",
+      "verdict": "PASSING"
+    },
+    "H2": {
+      "metric": "crypto basket minus SPY, since election",
+      "value": -13.85,
+      "pass": "<= -3.0 pp",
+      "falsify": "> -1.0 pp",
+      "verdict": "PASSING"
+    },
+    "H3": {
+      "metric": "|corr(policy exposure, return)| vs |corr(donor lean, return)|",
+      "exposureCorr": -0.366,
+      "donorCorr": 0.235,
+      "pass": "exposure |r| > donor |r|",
+      "verdict": "PASSING"
+    }
+  },
+  "tickers": [
+    {
+      "ticker": "FSLR",
+      "name": "First Solar",
+      "group": "CleanEnergy",
+      "donorLean": "D",
+      "exposure": 9,
+      "dims": {
+        "subsidy": 3,
+        "govContract": 1,
+        "regulation": 1,
+        "rates": 2,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 2
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 171.39,
+      "ret": {
+        "runup_1w": 5.72,
+        "since_election": -7.81,
+        "ytd": -37.53,
+        "y1": -32.4,
+        "d7": -10.55,
+        "d30": -0.72
+      }
+    },
+    {
+      "ticker": "RUN",
+      "name": "Sunrun",
+      "group": "CleanEnergy",
+      "donorLean": "D",
+      "exposure": 7,
+      "dims": {
+        "subsidy": 3,
+        "govContract": 0,
+        "regulation": 0,
+        "rates": 3,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 1
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 8.63,
+      "ret": {
+        "runup_1w": 15.27,
+        "since_election": -0.58,
+        "ytd": -55.61,
+        "y1": -53.53,
+        "d7": -11.4,
+        "d30": 18.22
+      }
+    },
+    {
+      "ticker": "ENPH",
+      "name": "Enphase",
+      "group": "CleanEnergy",
+      "donorLean": "D",
+      "exposure": 6,
+      "dims": {
+        "subsidy": 2,
+        "govContract": 0,
+        "regulation": 0,
+        "rates": 2,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 2
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 26.07,
+      "ret": {
+        "runup_1w": 2.22,
+        "since_election": -14.3,
+        "ytd": -22.76,
+        "y1": -5.3,
+        "d7": -10.35,
+        "d30": -14.86
+      }
+    },
+    {
+      "ticker": "NEE",
+      "name": "NextEra",
+      "group": "CleanEnergy",
+      "donorLean": "D",
+      "exposure": 4,
+      "dims": {
+        "subsidy": 2,
+        "govContract": 0,
+        "regulation": 0,
+        "rates": 2,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 85.12,
+      "ret": {
+        "runup_1w": 2.32,
+        "since_election": 0.94,
+        "ytd": 5.18,
+        "y1": -0.73,
+        "d7": -2,
+        "d30": 6.67
+      }
+    },
+    {
+      "ticker": "ICLN",
+      "name": "Clean energy ETF",
+      "group": "CleanEnergy",
+      "donorLean": "D",
+      "exposure": 4,
+      "dims": {
+        "subsidy": 2,
+        "govContract": 0,
+        "regulation": 0,
+        "rates": 2,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 15.81,
+      "ret": {
+        "runup_1w": 1.58,
+        "since_election": -1.86,
+        "ytd": -7.54,
+        "y1": -5.89,
+        "d7": -4.82,
+        "d30": -3.18
+      }
+    },
+    {
+      "ticker": "TAN",
+      "name": "Solar ETF",
+      "group": "CleanEnergy",
+      "donorLean": "D",
+      "exposure": 6,
+      "dims": {
+        "subsidy": 3,
+        "govContract": 0,
+        "regulation": 0,
+        "rates": 2,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 1
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 41.65,
+      "ret": {
+        "runup_1w": 3.14,
+        "since_election": -3.9,
+        "ytd": -19.28,
+        "y1": -14.58,
+        "d7": -7.81,
+        "d30": -0.48
+      }
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "group": "BigTech",
+      "donorLean": "D",
+      "exposure": -3,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 1,
+        "regulation": -2,
+        "rates": 1,
+        "wealthTax": -2,
+        "crypto": 0,
+        "tariff": -1
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 266.66,
+      "ret": {
+        "runup_1w": -0.95,
+        "since_election": 6.37,
+        "ytd": 17.73,
+        "y1": 14.51,
+        "d7": -0.1,
+        "d30": 6.66
+      }
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "group": "BigTech",
+      "donorLean": "D",
+      "exposure": -6,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 0,
+        "regulation": -2,
+        "rates": 1,
+        "wealthTax": -2,
+        "crypto": 0,
+        "tariff": -3
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 356.27,
+      "ret": {
+        "runup_1w": -4.38,
+        "since_election": 7.34,
+        "ytd": 31.46,
+        "y1": 33.2,
+        "d7": 1.59,
+        "d30": 3.73
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "group": "BigTech",
+      "donorLean": "D",
+      "exposure": 2,
+      "dims": {
+        "subsidy": 1,
+        "govContract": 2,
+        "regulation": -1,
+        "rates": 1,
+        "wealthTax": -1,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 523.88,
+      "ret": {
+        "runup_1w": -1.95,
+        "since_election": 0.55,
+        "ytd": 10.77,
+        "y1": 3.23,
+        "d7": -3.91,
+        "d30": -0.98
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "group": "BigTech",
+      "donorLean": "D",
+      "exposure": -3,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 1,
+        "regulation": -3,
+        "rates": 1,
+        "wealthTax": -2,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 295.77,
+      "ret": {
+        "runup_1w": -12.65,
+        "since_election": 5.62,
+        "ytd": -6.15,
+        "y1": 3.77,
+        "d7": 2.64,
+        "d30": -13.16
+      }
+    },
+    {
+      "ticker": "META",
+      "name": "Meta",
+      "group": "BigTech",
+      "donorLean": "D",
+      "exposure": -3,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 0,
+        "regulation": -2,
+        "rates": 1,
+        "wealthTax": -2,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 641.69,
+      "ret": {
+        "runup_1w": 0.14,
+        "since_election": 3.33,
+        "ytd": -1.34,
+        "y1": 6.59,
+        "d7": 0.05,
+        "d30": -9.54
+      }
+    },
+    {
+      "ticker": "XLV",
+      "name": "Healthcare ETF",
+      "group": "Healthcare",
+      "donorLean": "D",
+      "exposure": 4,
+      "dims": {
+        "subsidy": 1,
+        "govContract": 3,
+        "regulation": -1,
+        "rates": 1,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 188.85,
+      "ret": {
+        "runup_1w": 2.7,
+        "since_election": 2.62,
+        "ytd": 21.44,
+        "y1": 24.49,
+        "d7": 0.28,
+        "d30": 6.87
+      }
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth",
+      "group": "Healthcare",
+      "donorLean": "D",
+      "exposure": 3,
+      "dims": {
+        "subsidy": 1,
+        "govContract": 3,
+        "regulation": -2,
+        "rates": 1,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 407.46,
+      "ret": {
+        "runup_1w": -1.45,
+        "since_election": 0.75,
+        "ytd": 21.12,
+        "y1": 27.12,
+        "d7": 2.47,
+        "d30": 1.5
+      }
+    },
+    {
+      "ticker": "JNJ",
+      "name": "J&J",
+      "group": "Healthcare",
+      "donorLean": "D",
+      "exposure": -1,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 1,
+        "regulation": -2,
+        "rates": 1,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": -1
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 285.75,
+      "ret": {
+        "runup_1w": -0.95,
+        "since_election": 7.36,
+        "ytd": 37.81,
+        "y1": 43.18,
+        "d7": 1.29,
+        "d30": 11.81
+      }
+    },
+    {
+      "ticker": "MSOS",
+      "name": "US Cannabis ETF",
+      "group": "Cannabis",
+      "donorLean": "D",
+      "exposure": 5,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 0,
+        "regulation": 3,
+        "rates": 2,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 3.72,
+      "ret": {
+        "runup_1w": 11.14,
+        "since_election": -17.15,
+        "ytd": -22.34,
+        "y1": 15.17,
+        "d7": -8.6,
+        "d30": -4.37
+      }
+    },
+    {
+      "ticker": "TLT",
+      "name": "Long Treasuries",
+      "group": "Rates",
+      "donorLean": "D",
+      "exposure": 3,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 0,
+        "regulation": 0,
+        "rates": 3,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 79.38,
+      "ret": {
+        "runup_1w": -0.64,
+        "since_election": -2.13,
+        "ytd": -8.79,
+        "y1": -10.9,
+        "d7": -3.15,
+        "d30": -0.84
+      }
+    },
+    {
+      "ticker": "GLD",
+      "name": "Gold",
+      "group": "Haven",
+      "donorLean": "D",
+      "exposure": 4,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 0,
+        "regulation": 0,
+        "rates": 3,
+        "wealthTax": 1,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 355.45,
+      "ret": {
+        "runup_1w": -3.5,
+        "since_election": -1.06,
+        "ytd": -10.75,
+        "y1": -4.36,
+        "d7": -6.34,
+        "d30": -6.95
+      }
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "group": "MuskEmpire",
+      "donorLean": "R",
+      "exposure": 3,
+      "dims": {
+        "subsidy": 2,
+        "govContract": 1,
+        "regulation": 1,
+        "rates": 2,
+        "wealthTax": -3,
+        "crypto": 1,
+        "tariff": -1
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 390.22,
+      "ret": {
+        "runup_1w": -2.2,
+        "since_election": -2.08,
+        "ytd": -10.92,
+        "y1": -4.57,
+        "d7": 3.22,
+        "d30": 10.01
+      }
+    },
+    {
+      "ticker": "IBIT",
+      "name": "Bitcoin ETF",
+      "group": "Crypto",
+      "donorLean": "R",
+      "exposure": 8,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 0,
+        "regulation": 2,
+        "rates": 3,
+        "wealthTax": 0,
+        "crypto": 3,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 38.94,
+      "ret": {
+        "runup_1w": -3.61,
+        "since_election": -11.6,
+        "ytd": -23.56,
+        "y1": -25.26,
+        "d7": -7.99,
+        "d30": -15.62
+      }
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "group": "Crypto",
+      "donorLean": "R",
+      "exposure": 7,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 0,
+        "regulation": 2,
+        "rates": 2,
+        "wealthTax": 0,
+        "crypto": 3,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 127.65,
+      "ret": {
+        "runup_1w": -9.71,
+        "since_election": -12.24,
+        "ytd": -46.03,
+        "y1": -51.64,
+        "d7": -6.21,
+        "d30": -26.28
+      }
+    },
+    {
+      "ticker": "MSTR",
+      "name": "MicroStrategy",
+      "group": "Crypto",
+      "donorLean": "R",
+      "exposure": 4,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 0,
+        "regulation": 2,
+        "rates": -1,
+        "wealthTax": 0,
+        "crypto": 3,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 111.62,
+      "ret": {
+        "runup_1w": -4.08,
+        "since_election": -17.7,
+        "ytd": -28.98,
+        "y1": -42.88,
+        "d7": -11.12,
+        "d30": -18.42
+      }
+    },
+    {
+      "ticker": "GEO",
+      "name": "GEO Group",
+      "group": "PrivatePrison",
+      "donorLean": "R",
+      "exposure": 3,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 3,
+        "regulation": 1,
+        "rates": -1,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 32.53,
+      "ret": {
+        "runup_1w": -0.71,
+        "since_election": 15.89,
+        "ytd": 104.21,
+        "y1": 122.81,
+        "d7": 7.93,
+        "d30": 13.5
+      }
+    },
+    {
+      "ticker": "CXW",
+      "name": "CoreCivic",
+      "group": "PrivatePrison",
+      "donorLean": "R",
+      "exposure": 3,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 3,
+        "regulation": 1,
+        "rates": -1,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 31.27,
+      "ret": {
+        "runup_1w": 0.55,
+        "since_election": 0.97,
+        "ytd": 64.41,
+        "y1": 92.79,
+        "d7": 4.83,
+        "d30": 1.96
+      }
+    },
+    {
+      "ticker": "XLE",
+      "name": "Energy ETF",
+      "group": "Fossil",
+      "donorLean": "R",
+      "exposure": -3,
+      "dims": {
+        "subsidy": 1,
+        "govContract": 0,
+        "regulation": -3,
+        "rates": -1,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 64.96,
+      "ret": {
+        "runup_1w": -2.24,
+        "since_election": -2.58,
+        "ytd": 42.3,
+        "y1": 43.81,
+        "d7": 4.88,
+        "d30": -4.81
+      }
+    },
+    {
+      "ticker": "XOM",
+      "name": "Exxon",
+      "group": "Fossil",
+      "donorLean": "R",
+      "exposure": -3,
+      "dims": {
+        "subsidy": 1,
+        "govContract": 0,
+        "regulation": -3,
+        "rates": -1,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 170.59,
+      "ret": {
+        "runup_1w": -1.36,
+        "since_election": -3.87,
+        "ytd": 39.09,
+        "y1": 44.96,
+        "d7": 3.56,
+        "d30": -4.69
+      }
+    },
+    {
+      "ticker": "LMT",
+      "name": "Lockheed",
+      "group": "Defense",
+      "donorLean": "R",
+      "exposure": 3,
+      "dims": {
+        "subsidy": 1,
+        "govContract": 3,
+        "regulation": 0,
+        "rates": -1,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 596.04,
+      "ret": {
+        "runup_1w": 2.57,
+        "since_election": -6.72,
+        "ytd": 19.91,
+        "y1": 26.61,
+        "d7": 1.33,
+        "d30": 7.96
+      }
+    },
+    {
+      "ticker": "RTX",
+      "name": "RTX",
+      "group": "Defense",
+      "donorLean": "R",
+      "exposure": 2,
+      "dims": {
+        "subsidy": 1,
+        "govContract": 3,
+        "regulation": 0,
+        "rates": -1,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": -1
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 198.58,
+      "ret": {
+        "runup_1w": 4.74,
+        "since_election": -2.57,
+        "ytd": 6.05,
+        "y1": 13.07,
+        "d7": 1.16,
+        "d30": 2.4
+      }
+    },
+    {
+      "ticker": "ITA",
+      "name": "Defense ETF",
+      "group": "Defense",
+      "donorLean": "R",
+      "exposure": 3,
+      "dims": {
+        "subsidy": 1,
+        "govContract": 3,
+        "regulation": 0,
+        "rates": -1,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 71.51,
+      "ret": {
+        "runup_1w": 4.82,
+        "since_election": -0.76,
+        "ytd": -3.37,
+        "y1": 5.26,
+        "d7": -0.22,
+        "d30": 2.61
+      }
+    },
+    {
+      "ticker": "KBE",
+      "name": "Banks ETF",
+      "group": "Finance",
+      "donorLean": "R",
+      "exposure": -4,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 0,
+        "regulation": -3,
+        "rates": -2,
+        "wealthTax": 0,
+        "crypto": 1,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 66.45,
+      "ret": {
+        "runup_1w": 0.8,
+        "since_election": -0.21,
+        "ytd": 8.63,
+        "y1": 20.4,
+        "d7": -1.01,
+        "d30": 4.45
+      }
+    },
+    {
+      "ticker": "XLF",
+      "name": "Financials ETF",
+      "group": "Finance",
+      "donorLean": "R",
+      "exposure": -4,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 0,
+        "regulation": -3,
+        "rates": -2,
+        "wealthTax": 0,
+        "crypto": 1,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 58.68,
+      "ret": {
+        "runup_1w": 2.34,
+        "since_election": 2.61,
+        "ytd": 6.83,
+        "y1": 14.05,
+        "d7": 1.19,
+        "d30": 5.69
+      }
+    },
+    {
+      "ticker": "SMH",
+      "name": "Semiconductors",
+      "group": "AI",
+      "donorLean": "R",
+      "exposure": 1,
+      "dims": {
+        "subsidy": 3,
+        "govContract": 1,
+        "regulation": -1,
+        "rates": 1,
+        "wealthTax": -1,
+        "crypto": 0,
+        "tariff": -2
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 486.75,
+      "ret": {
+        "runup_1w": -7.07,
+        "since_election": -6.13,
+        "ytd": 30.39,
+        "y1": 43.04,
+        "d7": -0.14,
+        "d30": -9.83
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "name": "Nvidia",
+      "group": "AI",
+      "donorLean": "R",
+      "exposure": -3,
+      "dims": {
+        "subsidy": 1,
+        "govContract": 0,
+        "regulation": 0,
+        "rates": 1,
+        "wealthTax": -2,
+        "crypto": 0,
+        "tariff": -3
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 162.85,
+      "ret": {
+        "runup_1w": -5.16,
+        "since_election": -21.21,
+        "ytd": -13.77,
+        "y1": -12.73,
+        "d7": -8.85,
+        "d30": -23.95
+      }
+    },
+    {
+      "ticker": "XLK",
+      "name": "Tech sector ETF",
+      "group": "AI",
+      "donorLean": "R",
+      "exposure": -3,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 1,
+        "regulation": -2,
+        "rates": 1,
+        "wealthTax": -2,
+        "crypto": 0,
+        "tariff": -1
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 170.28,
+      "ret": {
+        "runup_1w": -6.85,
+        "since_election": -3.53,
+        "ytd": 18,
+        "y1": 20.07,
+        "d7": -0.35,
+        "d30": -7.19
+      }
+    },
+    {
+      "ticker": "SPY",
+      "name": "S&P 500",
+      "group": "Benchmark",
+      "donorLean": "-",
+      "exposure": 0,
+      "dims": {
+        "subsidy": 0,
+        "govContract": 0,
+        "regulation": 0,
+        "rates": 0,
+        "wealthTax": 0,
+        "crypto": 0,
+        "tariff": 0
+      },
+      "lastDate": "2026-11-13",
+      "lastClose": 754.37,
+      "ret": {
+        "runup_1w": -1.99,
+        "since_election": 0,
+        "ytd": 10.42,
+        "y1": 13.32,
+        "d7": 0.22,
+        "d30": -1.16
+      }
+    }
+  ]
+}
