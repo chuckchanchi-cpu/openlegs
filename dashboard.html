@@ -16,6 +16,7 @@
   .card .meta { color: #94a3b8; font-size: 12px; margin-top: 6px; }
   .track-ev { border-left-color: #f472b6; }
   .track-tax { border-left-color: #facc15; }
+  .track-ai { border-left-color: #a78bfa; }
   table { width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 10px; overflow: hidden; margin-bottom: 24px; }
   th, td { padding: 10px 14px; text-align: left; font-size: 13px; border-bottom: 1px solid #334155; }
   th { background: #334155; color: #cbd5e1; font-weight: 600; white-space: nowrap; }
@@ -28,16 +29,16 @@
 </head>
 <body>
   <h1>🏛️ openlegs — 立法雷達 Dashboard</h1>
-  <div class="sub">目標：中期選舉後民主黨權力評估 · 三線雷達 · 每晚 20:00 自動更新 · <a href="https://github.com/chuckchanchi-cpu/openlegs" style="color:#7dd3fc">GitHub</a></div>
+  <div class="sub">目標：中期選舉後民主黨權力評估 · 四線雷達 · 每晚 20:00 自動更新 · <a href="https://github.com/chuckchanchi-cpu/openlegs" style="color:#7dd3fc">GitHub</a></div>
 
   <div class="cards">
     <div class="card">
-      <h2> Chips to China <span class="badge b-new">1 今日</span></h2>
-      <div class="num">11</div>
-      <div class="meta">累積追蹤項目 · 最新報告 2026-11-20_晶片_BIS新規堵截遠程算力繞道+國會披露87萬芯片放行 · 前報 2026-11-20_ChipsToChina_BIS新規限雲端遙距取用+國會揭露87萬芯片批核</div>
+      <h2> Chips to China <span class="badge b-new">2 今日</span></h2>
+      <div class="num">13</div>
+      <div class="meta">累積追蹤項目 · 最新報告 2026-11-22_Chips_to_China_內容 · 前報 2026-11-21_ChipsToChina_BIS遙距存取晶片新規及國會披露批核數據（深夜補入）</div>
     </div>
     <div class="card track-ev">
-      <h2>🚗 EV from China <span class="badge b-new">1 今日</span></h2>
+      <h2>🚗 EV from China <span class="badge b-watch">0 今日</span></h2>
       <div class="num">9</div>
       <div class="meta">累積追蹤項目 · 最新報告 2026-11-20_電動車_加拿大審視中國電動車軍事場地准入+美國施壓 · 前報 2026-11-19_電動車_加中貿易解凍</div>
     </div>
@@ -46,15 +47,26 @@
       <div class="num">6</div>
       <div class="meta">累積追蹤項目 · 最新報告 2026-11-17 雷達日掃（0 新增）· 前報 2026-11-14_TaxTheRich_初輪掃描</div>
     </div>
+    <div class="card track-ai">
+      <h2>🏦 AI 信貸風險 <span class="badge b-new">1 今日 · 新線</span></h2>
+      <div class="num">1</div>
+      <div class="meta">累積追蹤項目 · 最新報告 2026-11-22_AI信貸風險_初輪掃描（⚡2026-11-22 開線）</div>
+    </div>
   </div>
 
   <table>
     <tr><th>雷達線</th><th>今日新動態</th><th>累積追蹤</th><th>最新報告</th><th>狀態</th><th>聽日追蹤點</th></tr>
     <tr>
-      <td> Chips to China</td><td>1</td><td>11</td>
-      <td><a href="radar/2026-11-20_晶片_BIS新規堵截遠程算力繞道+國會披露87萬芯片放行.md">11-20 晶片_BIS新規堵截遠程算力繞道+國會披露87萬芯片放行</a> · <a href="radar/2026-11-20_ChipsToChina_BIS新規限雲端遙距取用+國會揭露87萬芯片批核.md">11-20 BIS新規限雲端遙距取用+國會揭露87萬芯片批核</a></td>
+      <td> Chips to China</td><td>2</td><td>13</td>
+      <td><a href="radar/2026-11-22_Chips_to_China_內容.md">11-22 Chips_to_China_內容</a> · <a href="radar/2026-11-21_ChipsToChina_BIS遙距存取晶片新規及國會披露批核數據.md">11-21 BIS遙距存取晶片新規及國會披露批核數據</a></td>
       <td><span class="badge b-new">新動態</span></td>
-      <td>BIS IFR 刊憲/諮詢期後續 / TSMC、三星停運對華出貨衝擊與替代方案 / 國會就 87.9 萬顆批核聽證或立法 / 第三國轉運執法 / 五國（馬新印泰巴）牌照審批 / 中方反制（稀土）</td>
+      <td>特朗普「禁止美企海外建數據中心」具體措施 / BIS IFR 刊憲後續 / TSMC、三星停運對華出貨衝擊 / 國會易手（1月）後聽證與立法 / 司法委查 Lutnick（Megaspeed 案）/ 中方反制</td>
+    </tr>
+    <tr>
+      <td>🏦 AI 信貸風險</td><td>1</td><td>1</td>
+      <td><a href="radar/2026-11-22_AI信貸風險_初輪掃描.md">11-22 AI信貸風險_初輪掃描（開線）</a></td>
+      <td><span class="badge b-new">新線 ⚡</span></td>
+      <td>更多銀行跟手沽 AI 基建貸款？ / Oracle·CoreWeave CDS + AI 信貸 CDS ETF 上市表現 / NVDA CDS 係咪收窄 / 私募信貸 AI 敞口爆雷 / 數據中心建設放緩</td>
     </tr>
     <tr>
       <td>🚗 EV from China</td><td>1</td><td>9</td>
@@ -70,7 +82,7 @@
     </tr>
   </table>
 
-  <div class="sub" style="margin-bottom:16px">📰 <b>2026-11-21 晚報新增（11-20 深夜雷達補入）：</b><a href="radar/2026-11-20_晶片_BIS新規堵截遠程算力繞道+國會披露87萬芯片放行.md">晶片_BIS新規堵截遠程算力繞道+國會披露87萬芯片放行</a>（BIS「AI Diffusion 2.0」臨時最終規則：中國總部企業遙距存取境外先進算力納入許可證管制、堵截第三國轉運；TSMC、三星因代工豁免取消暫停部分對華出貨；眾議院外委會披露六個月內 BIS 批准近 88 萬顆 AI 芯片對華出口、申請總量約 344 萬顆，含騰訊 44 萬顆 H200 申請）+ <a href="radar/2026-11-20_電動車_加拿大審視中國電動車軍事場地准入+美國施壓.md">電動車_加拿大審視中國電動車軍事場地准入+美國施壓</a>（加拿大運輸部長 MacKinnon 宣布審視禁止中國電動車進入軍事基地及政府場地；49,000 輛低關稅配額用量未達標且大部分由 Tesla 佔用；Navarro 公開抨擊 Carney 談判；5,000 加元回扣 2027-01-01 縮減；英國對齊歐盟 45% 關稅仍在檢討）<br>📰 <b>2026-11-20 新增報告：</b><a href="radar/2026-11-20_ChipsToChina_BIS新規限雲端遙距取用+國會揭露87萬芯片批核.md">ChipsToChina_BIS新規限雲端遙距取用+國會揭露87萬芯片批核</a>（BIS 臨時最終規則擴大先進運算管制至遙距存取同第三國轉移，打擊「人唔出境、算力出境」；眾議院外交事務委員會 Mast 公開 BIS 對華 AI 芯片許可：申請約 340 萬顆、批出逾 87.9 萬顆 Nvidia/AMD 芯片，涉已被列「中國軍方企業」公司，國會要求收緊）<br>📰 <b>2026-11-19 新增報告：</b><a href="radar/2026-11-19_晶片_BIS远程访问规则.md">晶片_BIS遠程存取規則</a>（BIS《Addressing Remote Access to Advanced Semiconductors》RIN 0694-AK50：管制由貨物擴展至雲端算力服務；印尼/馬/新/泰/巴西五國逐案許可；同時廢除 AI Diffusion Rule；北京斥「經濟脅迫」、大馬要求數據中心遵從）+ <a href="radar/2026-11-19_電動車_加中貿易解凍.md">電動車_加中貿易解凍</a>（卡尼訪深圳再鬆綁：中方延長加農海產關稅暫停至 2028；中國 EV 已按 6.1% 稅率進口 16,211 輛、第二家中國車企獲批；英國據報拒絕歐盟對齊對華關稅）。另有前晚深夜兩份雷達報告補入：<a href="radar/2026-11-18_Chips to China_BIS封堵雲端遙距算力漏洞.md">11-18 BIS封堵雲端遙距算力漏洞</a>（§744.24 數據中心最終用途管制、1,200 萬 aggregate TPP 門檻、無 de minimis）· <a href="radar/2026-11-18_EV from China_加中擴大貿易協議Carney深化汽車合作.md">11-18 加中擴大貿易協議Carney深化汽車合作</a>（4 億加元出口關稅取消至 2028、卡尼公開將中國車企當對美談判籌碼）<br>📰 <b>2026-11-18 新增報告：</b><a href="radar/2026-11-18_EVfromChina_加中貿易協議擴大關稅減免.md">EVfromChina_加中貿易協議擴大關稅減免</a>（卡尼訪華深圳會晤：中國 EV 維持 6.1% 低關稅、配額 49,000 輛 → 2030 年 70,000 輛；中方降加豬肉/海產關稅、加方豁免中國鋼鋁）+ <a href="reports/2026-11-18_BIS_EntityList擴大_漏報分析與修復.md">BIS EntityList擴大_漏報分析與修復</a>（BIS Entity List +80 實體 + AI 晶片五國許可新規；雷達漏報根因：只掃國會法案，已修復為 BIS 新聞頁 + Federal Register + govinfo 三通道掃描）<br>📰 <b>2026-11-16 新增報告：</b><a href="radar/2026-11-16.md">雷達日掃（零新增）</a> — 三線零新增命中、零 stage 變動；HR10846 仍係 IH 無變動。另 fring1122-agent 新增 <a href="docs/radar-standard.md">radar-standard（可核實編號規約）</a> + <code>scripts/id_gate.js</code> 編號閘（審計：3 個編號核實、2 個缺口已標 pending-id）。<br>📰 <b>2026-11-15 新增報告：</b><a href="reports/2026-11-15_QTS新聞與貼現率分析.md">QTS 新聞與貼現率分析</a>（宏觀層：QTS 私人債務減售 $800M→$300M 屬定價拉鋸唔係違約恐慌；診斷 RATES_STORY — 10 年期債息一年 +1.01pp，HYG/BKLN 兩冇信貸壓力。另修正：NVDA/SMH 五日分化唔可以用一年期債息解釋，「板塊輪動」降格為假設）</div>
+  <div class="sub" style="margin-bottom:16px">📰 <b>2026-11-22 新增（⚡開第四線 AI 信貸風險）：</b><a href="radar/2026-11-22_AI信貸風險_初輪掃描.md">AI信貸風險_初輪掃描</a>（觸發：匯控約 3 億美元 Oracle 相關新墨西哥州數據中心建設貸款切片以約 85 美仙折價沽出；NVDA CDS 39bp→144.5bp、Morgan Stanley 觀望、「Bank of Nvidia」閂門、AI 信貸 CDS ETF 即將上市 — 信貸收水由定價進入行動層面）+ <a href="radar/2026-11-22_Chips_to_China_內容.md">Chips_to_China_內容</a>（BIS IFR 重寫先進邏輯晶片推定管制＋五國遙距存取許可；TSMC、三星即時暫停對華付運特定處理器；國會披露半年批出 879,868 顆 Nvidia/AMD 芯片、司法委查 Lutnick；特朗普承諾禁止美企海外建數據中心）+ 深夜補入 <a href="radar/2026-11-21_ChipsToChina_BIS遙距存取晶片新規及國會披露批核數據.md">11-21 BIS遙距存取晶片新規及國會披露批核數據</a><br>📰 <b>2026-11-21 晚報新增（11-20 深夜雷達補入）：</b><a href="radar/2026-11-20_晶片_BIS新規堵截遠程算力繞道+國會披露87萬芯片放行.md">晶片_BIS新規堵截遠程算力繞道+國會披露87萬芯片放行</a>（BIS「AI Diffusion 2.0」臨時最終規則：中國總部企業遙距存取境外先進算力納入許可證管制、堵截第三國轉運；TSMC、三星因代工豁免取消暫停部分對華出貨；眾議院外委會披露六個月內 BIS 批准近 88 萬顆 AI 芯片對華出口、申請總量約 344 萬顆，含騰訊 44 萬顆 H200 申請）+ <a href="radar/2026-11-20_電動車_加拿大審視中國電動車軍事場地准入+美國施壓.md">電動車_加拿大審視中國電動車軍事場地准入+美國施壓</a>（加拿大運輸部長 MacKinnon 宣布審視禁止中國電動車進入軍事基地及政府場地；49,000 輛低關稅配額用量未達標且大部分由 Tesla 佔用；Navarro 公開抨擊 Carney 談判；5,000 加元回扣 2027-01-01 縮減；英國對齊歐盟 45% 關稅仍在檢討）<br>📰 <b>2026-11-20 新增報告：</b><a href="radar/2026-11-20_ChipsToChina_BIS新規限雲端遙距取用+國會揭露87萬芯片批核.md">ChipsToChina_BIS新規限雲端遙距取用+國會揭露87萬芯片批核</a>（BIS 臨時最終規則擴大先進運算管制至遙距存取同第三國轉移，打擊「人唔出境、算力出境」；眾議院外交事務委員會 Mast 公開 BIS 對華 AI 芯片許可：申請約 340 萬顆、批出逾 87.9 萬顆 Nvidia/AMD 芯片，涉已被列「中國軍方企業」公司，國會要求收緊）<br>📰 <b>2026-11-19 新增報告：</b><a href="radar/2026-11-19_晶片_BIS远程访问规则.md">晶片_BIS遠程存取規則</a>（BIS《Addressing Remote Access to Advanced Semiconductors》RIN 0694-AK50：管制由貨物擴展至雲端算力服務；印尼/馬/新/泰/巴西五國逐案許可；同時廢除 AI Diffusion Rule；北京斥「經濟脅迫」、大馬要求數據中心遵從）+ <a href="radar/2026-11-19_電動車_加中貿易解凍.md">電動車_加中貿易解凍</a>（卡尼訪深圳再鬆綁：中方延長加農海產關稅暫停至 2028；中國 EV 已按 6.1% 稅率進口 16,211 輛、第二家中國車企獲批；英國據報拒絕歐盟對齊對華關稅）。另有前晚深夜兩份雷達報告補入：<a href="radar/2026-11-18_Chips to China_BIS封堵雲端遙距算力漏洞.md">11-18 BIS封堵雲端遙距算力漏洞</a>（§744.24 數據中心最終用途管制、1,200 萬 aggregate TPP 門檻、無 de minimis）· <a href="radar/2026-11-18_EV from China_加中擴大貿易協議Carney深化汽車合作.md">11-18 加中擴大貿易協議Carney深化汽車合作</a>（4 億加元出口關稅取消至 2028、卡尼公開將中國車企當對美談判籌碼）<br>📰 <b>2026-11-18 新增報告：</b><a href="radar/2026-11-18_EVfromChina_加中貿易協議擴大關稅減免.md">EVfromChina_加中貿易協議擴大關稅減免</a>（卡尼訪華深圳會晤：中國 EV 維持 6.1% 低關稅、配額 49,000 輛 → 2030 年 70,000 輛；中方降加豬肉/海產關稅、加方豁免中國鋼鋁）+ <a href="reports/2026-11-18_BIS_EntityList擴大_漏報分析與修復.md">BIS EntityList擴大_漏報分析與修復</a>（BIS Entity List +80 實體 + AI 晶片五國許可新規；雷達漏報根因：只掃國會法案，已修復為 BIS 新聞頁 + Federal Register + govinfo 三通道掃描）<br>📰 <b>2026-11-16 新增報告：</b><a href="radar/2026-11-16.md">雷達日掃（零新增）</a> — 三線零新增命中、零 stage 變動；HR10846 仍係 IH 無變動。另 fring1122-agent 新增 <a href="docs/radar-standard.md">radar-standard（可核實編號規約）</a> + <code>scripts/id_gate.js</code> 編號閘（審計：3 個編號核實、2 個缺口已標 pending-id）。<br>📰 <b>2026-11-15 新增報告：</b><a href="reports/2026-11-15_QTS新聞與貼現率分析.md">QTS 新聞與貼現率分析</a>（宏觀層：QTS 私人債務減售 $800M→$300M 屬定價拉鋸唔係違約恐慌；診斷 RATES_STORY — 10 年期債息一年 +1.01pp，HYG/BKLN 兩冇信貸壓力。另修正：NVDA/SMH 五日分化唔可以用一年期債息解釋，「板塊輪動」降格為假設）</div>
 
   <h2 style="font-size:17px; margin:18px 0 10px">🪞 金主資產鏡指標 — 2026-11-03 中期選舉後</h2>
   <div class="sub" style="margin-bottom:10px">假說（Chuck）：黨派勝負 → 金主相關資產重新定價。以下數字已用 Yahoo Finance 日線重算（2026-11-15 校正），並改為<b>政策曝險</b>框架。</div>

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# openlegs 晚報圖表：報表式表格圖（三線 × 今日新動態/累積追蹤/最新報告/聽日追蹤點）
+# openlegs 晚報圖表：報表式表格圖（四線 × 今日新動態/累積追蹤/最新報告/聽日追蹤點）
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -17,21 +17,24 @@ plt.rcParams["axes.unicode_minus"] = False
 
 HEADERS = ["雷達線", "今日新動態", "累積追蹤", "最新報告", "聽日追蹤點"]
 ROWS = [
-    ["◆ Chips to China（晶片）", "1", "11",
-     "2026-11-20_晶片_BIS新規堵截遠程算力繞道+國會披露87萬芯片放行 · 11-20_BIS新規限雲端遙距取用+國會揭露87萬芯片批核",
-     "IFR 刊憲/諮詢後續 / TSMC·三星停運對華出貨 / 國會 87.9 萬批核立法反應 / 第三國轉運執法 / 中方反制"],
-    ["◆ EV from China（電動車）", "1", "9",
-     "2026-11-20_電動車_加拿大審視中國電動車軍事場地准入+美國施壓 · 11-19_加中貿易解凍",
-     "加國軍事/政府場地審視進展 / 49,000 輛配額規則（Tesla 佔用）/ Navarro 施壓 / 2027 回扣縮減 / 英國關稅檢討"],
+    ["◆ Chips to China（晶片）", "2", "13",
+     "2026-11-22_Chips_to_China_內容\n11-21_BIS遙距存取晶片新規及\n國會披露批核數據",
+     "特朗普禁美企海外建數據中心措施\nTSMC·三星停運衝擊 / 國會易手後聽證\n司法委查 Lutnick / 中方反制"],
+    ["◆ EV from China（電動車）", "0", "9",
+     "2026-11-20_電動車_加拿大審視中國電動車\n軍事場地准入+美國施壓 · 11-19_加中貿易解凍",
+     "加國軍事/政府場地審視進展\n49,000 輛配額規則（Tesla 佔用）/ Navarro 施壓\n2027 回扣縮減 / 英國關稅檢討"],
     ["◆ Tax the Rich（富人稅）", "0", "6",
-     "2026-11-17 雷達日掃（0 新增）· 前報 2026-11-14_TaxTheRich_初輪掃描",
-     "HR10846 stage 動向（再現仍 IH）/ Ways & Means / Wyden / BTC 加密政治反應"],
+     "2026-11-17 雷達日掃（0 新增）\n前報 2026-11-14_TaxTheRich_初輪掃描",
+     "HR10846 stage 動向（再現仍 IH）\nWays & Means / Wyden / BTC 加密政治反應"],
+    ["◆ AI 信貸風險（新線）", "1", "1",
+     "2026-11-22_AI信貸風險_初輪掃描\n（開線：HSBC 85折沽 Oracle 數據中心貸款）",
+     "更多銀行沽 AI 基建貸款？\nOracle·CoreWeave CDS + AI CDS ETF 上市\nNVDA CDS 見底？/ 私募信貸爆雷 / 建設放緩"],
 ]
-COL_WIDTHS = [0.17, 0.10, 0.09, 0.32, 0.32]
+COL_WIDTHS = [0.16, 0.09, 0.09, 0.33, 0.33]
 ROW_H = 0.135
 HEAD_H = 0.09
 
-fig_w, fig_h = 16, 5.2
+fig_w, fig_h = 16, 6.6
 fig, ax = plt.subplots(figsize=(fig_w, fig_h))
 ax.axis("off")
 
