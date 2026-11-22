@@ -11,6 +11,7 @@
 1. **Chips to China**：美國晶片法案、出口管制（BIS rules、Entity List、SME 設備管制）
 2. **EV from China**：電動車關稅（Section 301 / Section 232）、電池管制、中國反制
 3. **Tax the Rich**：財富稅、buy-borrow-die、退休帳戶改革 → 民主黨議程嘅試金石
+4. **AI 信貸風險**（2026-11-22 開線）：AI 基建貸款/CDS/銀行收水（HSBC-Oracle 貸款折價、CoreWeave/Oracle CDS、Bank of Nvidia、NVDA CDS）
 
 逐步擴展到：地緣經濟立法、制裁、補貼戰、供應鏈法案。
 
