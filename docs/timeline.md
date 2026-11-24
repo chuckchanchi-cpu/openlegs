@@ -1,7 +1,7 @@
 # 時間線（時間的腿）
 
 狀態：只有**已確認**事件才寫入；未確認的放最後一節。
-最後更新：2026-11-14
+最後更新：2026-11-24
 
 ---
 
@@ -18,6 +18,9 @@
 | 2026-06 | BIS 關閉第三國晶片轉運漏洞（規模 $4-6B，待證） | 報導提及 | D |
 | 2026-04-29 | 參議員 Moreno、Slotkin 提出 Connected Vehicle Security Act | 參議院 | C |
 | 2026-11-09 | Jeffries 在國防授權法案推動收緊對華晶片出口 | Politico | D |
+| 2026-11-19 | 91 FR 74970《Addressing Remote Access to Advanced Semiconductors》刊憲即時生效（五國許可＋撤銷 AI Diffusion Rule） | Federal Register 2026-23529 | A |
+| 2026-11-20 | S. 3301 Chip EQUIP Act 經參議院商務委員會報告（RS 版，Calendar No. 727；11-24 RS 文本刊上 govinfo） | govinfo BILLS-119s3301rs | A |
+| 2026-11-24 | BIS 將 Megaspeed 及 6 家關聯公司列入實體清單（涉轉運 Nvidia AI 晶片予中國） | BIS／報道（待刊憲 FR 補編號） | B |
 
 ## 待核實（不要當事實用）
 
@@ -26,6 +29,7 @@
 3. **「中國半導體設備自給率 35%」** — 來源不明，需找原始報告
 4. **台灣對 AI 晶片出口的刑事罰則** — 立法進度未確認
 5. **「MATCH Act」** — 只在二手整理文章出現，需查 congress.gov
+6. **80 實體 Entity List 擴大（2026-11-16 新聞稿）** — 截至 11-24 仍未刊憲聯邦公報，待補編號
 
 ## 已知的關鍵時點（要盯）
 
