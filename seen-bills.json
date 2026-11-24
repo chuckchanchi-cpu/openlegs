@@ -6,5 +6,22 @@
     "party": "D",
     "firstSeen": "2026-11-15",
     "title": "Pay Your Taxes Avoided by Borrowing Act of 2026"
+  },
+  "S. 3301": {
+    "stage": "RS",
+    "track": "chips-to-China",
+    "sponsor": "Mark Kelly",
+    "party": "D",
+    "firstSeen": "2026-11-24",
+    "title": "Chip Equipment Quality, Usefulness, and Integrity Protection Act of 2026 (Chip EQUIP Act)",
+    "note": "Reported by Cruz w/ amendment 2026-11-20; FEOC-based, no literal China in text; govinfo BILLS-119s3301rs"
+  },
+  "91 FR 74970": {
+    "stage": "Rule (IFR)",
+    "track": "chips-to-China",
+    "firstSeen": "2026-11-24",
+    "title": "Addressing Remote Access to Advanced Semiconductors",
+    "frDoc": "2026-23529",
+    "note": "Published 2026-11-19; press release 2026-11-16; rescinds AI Diffusion Rule"
   }
 }
