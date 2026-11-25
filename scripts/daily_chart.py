@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# openlegs 晚報圖表：報表式表格圖（四線 × 今日新動態/累積追蹤/最新報告/聽日追蹤點）
+# openlegs 晚報圖表：報表式表格圖（三線 × 今日新動態/累積追蹤/最新報告/聽日追蹤點）
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -17,24 +17,21 @@ plt.rcParams["axes.unicode_minus"] = False
 
 HEADERS = ["雷達線", "今日新動態", "累積追蹤", "最新報告", "聽日追蹤點"]
 ROWS = [
-    ["◆ Chips to China（晶片）", "3", "18",
-     "2026-11-24_BIS將Megaspeed列入實體清單\n2026-11-24_雷達日掃（S.3301 RS 刊憲\n+ 91 FR 74970 刊憲生效）",
-     "80 實體 Entity List 擴大刊憲 FR？（待補編號）\nMegaspeed 列名後續＋轉運調查 / S.3301 全院排期\n91 FR 74970 執法落地（五國許可＋美企月報）\nTSMC 16/14nm 停運後續＋Samsung / 中方反制"],
-    ["◆ EV from China（電動車）", "0", "10",
-     "2026-11-23_二線_EVfromChina_加拿大\n規劃中國車企投資路徑",
-     "加中合資框架落實進展（加股權+本地夥伴）\n配額 17,000/49,000 輛 / Ford 反對賓頓廠\n韓國本週保護措施 / 美方反應"],
-    ["◆ Tax the Rich（富人稅）", "0", "6",
-     "2026-11-17 雷達日掃（0 新增）\n前報 2026-11-14_TaxTheRich_初輪掃描",
-     "HR10846 stage 動向（再現仍 IH）\nWays & Means / Wyden / BTC 加密政治反應"],
-    ["◆ AI 信貸風險", "1", "5",
-     "2026-11-24_CDS隱含違約機率急升\nNvidia 多線調查",
-     "CoreWeave CDS 1,090bp／隱含 CCC- 61% 違約機率\nOracle 隱含 23%→評級跟進降級？/ 下批 AI 債券定價\nNvidia DOJ・SEC・國會調查＋Hugging Face 反壟斷\n眾議院 BAAJA 審議"],
+    ["◆ Chips to China（晶片）", "3", "21",
+     "2026-11-25_1_Chips_to_China\nBIS 名單化執法＋新規堵截算力漏洞\n（11-24 深夜補：新規封堵雲端漏洞＋Megaspeed 黑名單）",
+     "Megaspeed 列名後續＋轉運刑事調查\n遙距存取規則許可證批核（1,200 萬 TPP 門檻）\nTSMC 16/14nm 停運後續＋Samsung / S.3301 全院排期\n80 實體 Entity List 擴大刊憲 FR？/ 中方反制"],
+    ["◆ EV from China（電動車）", "3", "13",
+     "2026-11-25_2_EV_from_China\n美國重建全球關稅＋歐盟封堵混能缺口\n（11-24 深夜補：EU 對中國混能車實施進口配額）",
+     "美國新一輪全球關稅最快本週公布（16 經濟體稅率清單＋豁免）\n歐盟混能配額 12-1 實施細節／提前用盡配額\n配額用量 17,000/49,000 輛 / 加中合資框架 / 韓國保護措施\n2027Q1 中國電芯及正極去庫存壓力"],
+    ["◆ AI 信貸風險", "3", "8",
+     "2026-11-25_4_AI信貸風險\nAI CDS 集體創歷史高位（觀察→警戒）\n（11-24 深夜補：ING 數據中心貸款流拍與 AI 信貸收緊）",
+     "SoftBank CDS 501bp／CoreWeave 隱含 68% 違約機率走勢\n評級機構跟進降級？/ ING 同類貸款定價＋銀行收緊 AI 敞口\n下批 AI 債券定價 / 眾議院 BAAJA 審議"],
 ]
-COL_WIDTHS = [0.16, 0.09, 0.09, 0.33, 0.33]
-ROW_H = 0.15
+COL_WIDTHS = [0.15, 0.09, 0.09, 0.335, 0.335]
+ROW_H = 0.19
 HEAD_H = 0.09
 
-fig_w, fig_h = 16, 7.2
+fig_w, fig_h = 16, 5.8
 fig, ax = plt.subplots(figsize=(fig_w, fig_h))
 ax.axis("off")
 
